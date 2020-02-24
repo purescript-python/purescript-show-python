@@ -4,5 +4,5 @@
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 , backend = "pspy"
 , license = "MIT"
-, repository = "https://github.com/thautwarm/purescript-show-python.git"
+, repository = "https://github.com/purescript-python/purescript-show-python.git"
 }
