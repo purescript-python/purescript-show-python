@@ -1,0 +1,20 @@
+{
+    "name": "purescript-show-python",
+    "license": [
+        "MIT"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/purescript-python/purescript-show-python.git"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "output"
+    ],
+    "dependencies": {
+        "purescript-effect": "^v2.0.1",
+        "purescript-prelude": "^v4.1.1"
+    }
+}
