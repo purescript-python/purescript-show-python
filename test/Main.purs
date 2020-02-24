@@ -10,6 +10,8 @@ import Python.IO.Unsafe as Unsafe
 data A = A1 Boolean Boolean
 newtype N = N Int
 
+newtype Box a = Box a
+
 main :: Effect Unit
 main = do
   log "🍝"
@@ -24,5 +26,9 @@ main = do
   Unsafe.assert $ x == y
 
   x <- Unsafe.repr (N 1)
+  y <- Unsafe.repr 1
+  Unsafe.assert $ x == y  
+
+  x <- Unsafe.repr (Box 1)
   y <- Unsafe.repr 1
   Unsafe.assert $ x == y  
