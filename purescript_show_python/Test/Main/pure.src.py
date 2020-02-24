@@ -7,12 +7,6 @@ res = block( "No document"
            , assign_star( "ps_Effect"
                         , call( var('import_module')
                               , "purescript_show_python.Effect.pure" ) )
-           , assign_star( "ps_Effect_Class"
-                        , call( var('import_module')
-                              , "purescript_show_python.Effect.Class.pure" ) )
-           , assign_star( "ps_Effect_Class_Console"
-                        , call( var('import_module')
-                              , "purescript_show_python.Effect.Class.Console.pure" ) )
            , assign_star( "ps_Python_IO_Unsafe"
                         , call( var('import_module')
                               , "purescript_show_python.Python.IO.Unsafe.pure" ) )
@@ -47,14 +41,16 @@ res = block( "No document"
                                                           , "discardUnit" ) )
                                           , get_item( var("ps_Effect")
                                                     , "bindEffect" ) )
-                                    , call( call( get_item( var( "ps_Effect_Class_Console" )
-                                                          , "log" )
-                                                , get_item( var( "ps_Effect_Class" )
-                                                          , "monadEffectEffect" ) )
-                                          , metadata( 18
-                                                    , 7
+                                    , call( get_item( var("ps_Python_IO_Unsafe")
+                                                    , "printLn" )
+                                          , metadata( 17
+                                                    , 18
                                                     , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                    , "🍝" ) ) )
+                                                    , record( ( "a"
+                                                              , metadata( 17
+                                                                        , 22
+                                                                        , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                        , 1 ) ) ) ) ) )
                               , define( None
                                       , ["ps_$__unused"]
                                       , block( ret( call( call( call( call( get_item( var( "ps_Control_Bind" )
@@ -65,14 +61,15 @@ res = block( "No document"
                                                                               , "bindEffect" ) )
                                                               , call( get_item( var( "ps_Python_IO_Unsafe" )
                                                                               , "printLn" )
-                                                                    , metadata( 19
-                                                                              , 18
-                                                                              , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                              , record( ( "a"
-                                                                                        , metadata( 19
-                                                                                                  , 22
-                                                                                                  , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                  , 1 ) ) ) ) ) )
+                                                                    , new( var( "ps_A1" )
+                                                                         , metadata( 19
+                                                                                   , 23
+                                                                                   , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                                   , True )
+                                                                         , metadata( 19
+                                                                                   , 28
+                                                                                   , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                                   , False ) ) ) )
                                                         , define( None
                                                                 , [ "ps_$__unused" ]
                                                                 , block( ret( call( call( call( call( get_item( var( "ps_Control_Bind" )
@@ -83,15 +80,7 @@ res = block( "No document"
                                                                                                         , "bindEffect" ) )
                                                                                         , call( get_item( var( "ps_Python_IO_Unsafe" )
                                                                                                         , "printLn" )
-                                                                                              , new( var( "ps_A1" )
-                                                                                                   , metadata( 21
-                                                                                                             , 23
-                                                                                                             , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                             , True )
-                                                                                                   , metadata( 21
-                                                                                                             , 28
-                                                                                                             , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                             , False ) ) ) )
+                                                                                              , var( "ps_N" ) ) )
                                                                                   , define( None
                                                                                           , [ "ps_$__unused" ]
                                                                                           , block( ret( call( call( call( call( get_item( var( "ps_Control_Bind" )
@@ -102,102 +91,91 @@ res = block( "No document"
                                                                                                                                   , "bindEffect" ) )
                                                                                                                   , call( get_item( var( "ps_Python_IO_Unsafe" )
                                                                                                                                   , "printLn" )
-                                                                                                                        , var( "ps_N" ) ) )
+                                                                                                                        , metadata( 21
+                                                                                                                                  , 22
+                                                                                                                                  , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                                                                                  , 1 ) ) )
                                                                                                             , define( None
                                                                                                                     , [ "ps_$__unused" ]
-                                                                                                                    , block( ret( call( call( call( call( get_item( var( "ps_Control_Bind" )
-                                                                                                                                                                  , "discard" )
-                                                                                                                                                        , get_item( var( "ps_Control_Bind" )
-                                                                                                                                                                  , "discardUnit" ) )
-                                                                                                                                                  , get_item( var( "ps_Effect" )
-                                                                                                                                                            , "bindEffect" ) )
-                                                                                                                                            , call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                            , "printLn" )
-                                                                                                                                                  , metadata( 23
-                                                                                                                                                            , 22
-                                                                                                                                                            , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                                                                            , 1 ) ) )
-                                                                                                                                      , define( None
-                                                                                                                                              , [ "ps_$__unused" ]
-                                                                                                                                              , block( ret( define( "ps___do"
-                                                                                                                                                                  , [  ]
-                                                                                                                                                                  , block( assign_star( "ps_x"
-                                                                                                                                                                                      , call( call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                                                                            , "show" )
-                                                                                                                                                                                                  , metadata( 25
-                                                                                                                                                                                                            , 23
-                                                                                                                                                                                                            , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                                                                                                                            , 1 ) ) ) )
-                                                                                                                                                                         , assign_star( "ps_y"
-                                                                                                                                                                                      , call( call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                                                                            , "show" )
-                                                                                                                                                                                                  , metadata( 26
-                                                                                                                                                                                                            , 20
-                                                                                                                                                                                                            , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                                                                                                                            , 1 ) ) ) )
-                                                                                                                                                                         , ret( call( call( call( call( call( get_item( var( "ps_Control_Bind" )
-                                                                                                                                                                                                                      , "discard" )
-                                                                                                                                                                                                            , get_item( var( "ps_Control_Bind" )
-                                                                                                                                                                                                                      , "discardUnit" ) )
-                                                                                                                                                                                                      , get_item( var( "ps_Effect" )
-                                                                                                                                                                                                                , "bindEffect" ) )
-                                                                                                                                                                                                , call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                                                                                , "assert" )
-                                                                                                                                                                                                      , cmp( var( "ps_x" )
-                                                                                                                                                                                                           , Compare.EQ
-                                                                                                                                                                                                           , var( "ps_y" ) ) ) )
-                                                                                                                                                                                          , define( None
-                                                                                                                                                                                                  , [ "ps_$__unused" ]
-                                                                                                                                                                                                  , block( ret( define( "ps___do"
-                                                                                                                                                                                                                      , [  ]
-                                                                                                                                                                                                                      , block( assign_star( "ps_x1"
-                                                                                                                                                                                                                                          , call( call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                                                                                                                                , "repr" )
-                                                                                                                                                                                                                                                      , metadata( 29
-                                                                                                                                                                                                                                                                , 23
-                                                                                                                                                                                                                                                                , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                                                                                                                                                                                , 1 ) ) ) )
-                                                                                                                                                                                                                             , assign_star( "ps_y1"
-                                                                                                                                                                                                                                          , call( call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                                                                                                                                , "repr" )
-                                                                                                                                                                                                                                                      , metadata( 30
-                                                                                                                                                                                                                                                                , 20
-                                                                                                                                                                                                                                                                , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                                                                                                                                                                                , 1 ) ) ) )
-                                                                                                                                                                                                                             , ret( call( call( call( call( call( get_item( var( "ps_Control_Bind" )
-                                                                                                                                                                                                                                                                          , "discard" )
-                                                                                                                                                                                                                                                                , get_item( var( "ps_Control_Bind" )
-                                                                                                                                                                                                                                                                          , "discardUnit" ) )
-                                                                                                                                                                                                                                                          , get_item( var( "ps_Effect" )
-                                                                                                                                                                                                                                                                    , "bindEffect" ) )
-                                                                                                                                                                                                                                                    , call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                                                                                                                                    , "assert" )
-                                                                                                                                                                                                                                                          , cmp( var( "ps_x1" )
-                                                                                                                                                                                                                                                               , Compare.EQ
-                                                                                                                                                                                                                                                               , var( "ps_y1" ) ) ) )
-                                                                                                                                                                                                                                              , define( None
-                                                                                                                                                                                                                                                      , [ "ps_$__unused" ]
-                                                                                                                                                                                                                                                      , block( ret( define( "ps___do"
-                                                                                                                                                                                                                                                                          , [  ]
-                                                                                                                                                                                                                                                                          , block( assign_star( "ps_x2"
-                                                                                                                                                                                                                                                                                              , call( call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                                                                                                                                                                                    , "repr" )
-                                                                                                                                                                                                                                                                                                          , metadata( 33
-                                                                                                                                                                                                                                                                                                                    , 25
-                                                                                                                                                                                                                                                                                                                    , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                                                                                                                                                                                                                                    , 1 ) ) ) )
-                                                                                                                                                                                                                                                                                 , assign_star( "ps_y2"
-                                                                                                                                                                                                                                                                                              , call( call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                                                                                                                                                                                    , "repr" )
-                                                                                                                                                                                                                                                                                                          , metadata( 34
-                                                                                                                                                                                                                                                                                                                    , 20
-                                                                                                                                                                                                                                                                                                                    , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
-                                                                                                                                                                                                                                                                                                                    , 1 ) ) ) )
-                                                                                                                                                                                                                                                                                 , ret( call( call( get_item( var( "ps_Python_IO_Unsafe" )
-                                                                                                                                                                                                                                                                                                            , "assert" )
-                                                                                                                                                                                                                                                                                                  , cmp( var( "ps_x2" )
-                                                                                                                                                                                                                                                                                                       , Compare.EQ
-                                                                                                                                                                                                                                                                                                       , var( "ps_y2" ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )
+                                                                                                                    , block( ret( define( "ps___do"
+                                                                                                                                        , [  ]
+                                                                                                                                        , block( assign_star( "ps_x"
+                                                                                                                                                            , call( call( get_item( var( "ps_Python_IO_Unsafe" )
+                                                                                                                                                                                  , "show" )
+                                                                                                                                                                        , metadata( 23
+                                                                                                                                                                                  , 23
+                                                                                                                                                                                  , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                                                                                                                                  , 1 ) ) ) )
+                                                                                                                                               , assign_star( "ps_y"
+                                                                                                                                                            , call( call( get_item( var( "ps_Python_IO_Unsafe" )
+                                                                                                                                                                                  , "show" )
+                                                                                                                                                                        , metadata( 24
+                                                                                                                                                                                  , 20
+                                                                                                                                                                                  , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                                                                                                                                  , 1 ) ) ) )
+                                                                                                                                               , ret( call( call( call( call( call( get_item( var( "ps_Control_Bind" )
+                                                                                                                                                                                            , "discard" )
+                                                                                                                                                                                  , get_item( var( "ps_Control_Bind" )
+                                                                                                                                                                                            , "discardUnit" ) )
+                                                                                                                                                                            , get_item( var( "ps_Effect" )
+                                                                                                                                                                                      , "bindEffect" ) )
+                                                                                                                                                                      , call( get_item( var( "ps_Python_IO_Unsafe" )
+                                                                                                                                                                                      , "assert" )
+                                                                                                                                                                            , cmp( var( "ps_x" )
+                                                                                                                                                                                 , Compare.EQ
+                                                                                                                                                                                 , var( "ps_y" ) ) ) )
+                                                                                                                                                                , define( None
+                                                                                                                                                                        , [ "ps_$__unused" ]
+                                                                                                                                                                        , block( ret( define( "ps___do"
+                                                                                                                                                                                            , [  ]
+                                                                                                                                                                                            , block( assign_star( "ps_x1"
+                                                                                                                                                                                                                , call( call( get_item( var( "ps_Python_IO_Unsafe" )
+                                                                                                                                                                                                                                      , "repr" )
+                                                                                                                                                                                                                            , metadata( 27
+                                                                                                                                                                                                                                      , 23
+                                                                                                                                                                                                                                      , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                                                                                                                                                                                      , 1 ) ) ) )
+                                                                                                                                                                                                   , assign_star( "ps_y1"
+                                                                                                                                                                                                                , call( call( get_item( var( "ps_Python_IO_Unsafe" )
+                                                                                                                                                                                                                                      , "repr" )
+                                                                                                                                                                                                                            , metadata( 28
+                                                                                                                                                                                                                                      , 20
+                                                                                                                                                                                                                                      , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                                                                                                                                                                                      , 1 ) ) ) )
+                                                                                                                                                                                                   , ret( call( call( call( call( call( get_item( var( "ps_Control_Bind" )
+                                                                                                                                                                                                                                                , "discard" )
+                                                                                                                                                                                                                                      , get_item( var( "ps_Control_Bind" )
+                                                                                                                                                                                                                                                , "discardUnit" ) )
+                                                                                                                                                                                                                                , get_item( var( "ps_Effect" )
+                                                                                                                                                                                                                                          , "bindEffect" ) )
+                                                                                                                                                                                                                          , call( get_item( var( "ps_Python_IO_Unsafe" )
+                                                                                                                                                                                                                                          , "assert" )
+                                                                                                                                                                                                                                , cmp( var( "ps_x1" )
+                                                                                                                                                                                                                                     , Compare.EQ
+                                                                                                                                                                                                                                     , var( "ps_y1" ) ) ) )
+                                                                                                                                                                                                                    , define( None
+                                                                                                                                                                                                                            , [ "ps_$__unused" ]
+                                                                                                                                                                                                                            , block( ret( define( "ps___do"
+                                                                                                                                                                                                                                                , [  ]
+                                                                                                                                                                                                                                                , block( assign_star( "ps_x2"
+                                                                                                                                                                                                                                                                    , call( call( get_item( var( "ps_Python_IO_Unsafe" )
+                                                                                                                                                                                                                                                                                          , "repr" )
+                                                                                                                                                                                                                                                                                , metadata( 31
+                                                                                                                                                                                                                                                                                          , 25
+                                                                                                                                                                                                                                                                                          , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                                                                                                                                                                                                                                          , 1 ) ) ) )
+                                                                                                                                                                                                                                                       , assign_star( "ps_y2"
+                                                                                                                                                                                                                                                                    , call( call( get_item( var( "ps_Python_IO_Unsafe" )
+                                                                                                                                                                                                                                                                                          , "repr" )
+                                                                                                                                                                                                                                                                                , metadata( 32
+                                                                                                                                                                                                                                                                                          , 20
+                                                                                                                                                                                                                                                                                          , "C:\\Users\\twshe\\Desktop\\mydb\\com-haskell\\v0.1\\purescript-show-python\\test\\Main.purs"
+                                                                                                                                                                                                                                                                                          , 1 ) ) ) )
+                                                                                                                                                                                                                                                       , ret( call( call( get_item( var( "ps_Python_IO_Unsafe" )
+                                                                                                                                                                                                                                                                                  , "assert" )
+                                                                                                                                                                                                                                                                        , cmp( var( "ps_x2" )
+                                                                                                                                                                                                                                                                             , Compare.EQ
+                                                                                                                                                                                                                                                                             , var( "ps_y2" ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )
            , assign( "exports"
                    , record( ("A1", var("ps_A1"))
                            , ("N", var("ps_N"))

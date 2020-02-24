@@ -3,7 +3,6 @@ module Test.Main where
 import Prelude
 
 import Effect (Effect)
-import Effect.Class.Console (log)
 
 import Python.IO.Unsafe as Unsafe
 
@@ -14,7 +13,6 @@ newtype Box a = Box a
 
 main :: Effect Unit
 main = do
-  log "🍝"
   Unsafe.printLn {a: 1}
   
   Unsafe.printLn $ A1 true false
