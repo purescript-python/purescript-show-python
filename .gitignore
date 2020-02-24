@@ -11,6 +11,5 @@
 
 # purescript-python
 .pure-py/
-pure-py.json
 
 **__pycache__
